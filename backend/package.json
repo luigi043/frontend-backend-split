@@ -1,0 +1,16 @@
+{
+  "name": "databridge-backend",
+  "version": "1.0.0",
+  "description": "DataBridge backend - Express REST API serving product data from a JSON file",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["express", "rest-api", "demo"],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

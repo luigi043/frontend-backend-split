@@ -1,0 +1,14 @@
+[
+  { "id": 1,  "name": "Aero Laptop 14",      "price": 1200, "category": "Computers",   "description": "Thin-and-light 14-inch laptop for everyday work." },
+  { "id": 2,  "name": "Nimbus Phone X",      "price": 800,  "category": "Phones",      "description": "6.1-inch OLED smartphone with all-day battery." },
+  { "id": 3,  "name": "Pulse Buds Pro",      "price": 150,  "category": "Audio",       "description": "Wireless earbuds with active noise cancelling." },
+  { "id": 4,  "name": "Vega 27 Monitor",     "price": 340,  "category": "Computers",   "description": "27-inch QHD monitor with a 144Hz refresh rate." },
+  { "id": 5,  "name": "Orbit Smartwatch 2",  "price": 220,  "category": "Wearables",   "description": "Fitness watch with heart-rate and GPS tracking." },
+  { "id": 6,  "name": "Echo Soundbar 200",   "price": 180,  "category": "Audio",       "description": "Compact 2.1 soundbar with wireless subwoofer." },
+  { "id": 7,  "name": "Glide Wireless Mouse","price": 45,   "category": "Accessories", "description": "Ergonomic silent-click mouse with USB-C charging." },
+  { "id": 8,  "name": "Forge Keyboard 65",   "price": 95,   "category": "Accessories", "description": "65% mechanical keyboard with hot-swap switches." },
+  { "id": 9,  "name": "Nimbus Phone Mini",   "price": 600,  "category": "Phones",      "description": "Compact 5.4-inch phone for one-handed use." },
+  { "id": 10, "name": "Strato Tablet 11",    "price": 520,  "category": "Computers",   "description": "11-inch tablet with stylus support for notes." },
+  { "id": 11, "name": "Halo Band Lite",      "price": 90,   "category": "Wearables",   "description": "Lightweight fitness band with sleep tracking." },
+  { "id": 12, "name": "Pulse Over-Ear 700",  "price": 260,  "category": "Audio",       "description": "Over-ear headphones with 30-hour battery life." }
+]
