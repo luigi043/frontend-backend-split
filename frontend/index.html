@@ -13,14 +13,34 @@
   </header>
 
   <main class="container">
-    <!-- Loading state -->
-    <div id="loading" class="state">Loading products...</div>
+    <!-- Controls: search + category filter (bonus) -->
+    <div class="controls" id="controls" hidden>
+      <input
+        id="search"
+        class="controls__search"
+        type="search"
+        placeholder="Search products by name..."
+        aria-label="Search products"
+      />
+      <select id="category" class="controls__select" aria-label="Filter by category">
+        <option value="all">All categories</option>
+      </select>
+    </div>
+
+    <!-- Loading state (animated spinner) -->
+    <div id="loading" class="state">
+      <span class="spinner" aria-hidden="true"></span>
+      <span>Loading products...</span>
+    </div>
 
     <!-- Error state -->
     <div id="error" class="state state--error" hidden>
       <p>Could not load products.</p>
       <button id="retry" class="btn">Retry</button>
     </div>
+
+    <!-- Empty state (filters matched nothing) -->
+    <div id="empty" class="state" hidden>No products match your filters.</div>
 
     <!-- Data grid -->
     <section id="grid" class="grid" hidden></section>
