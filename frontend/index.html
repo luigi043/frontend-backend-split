@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataBridge — Product Catalog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">DataBridge</h1>
+    <p class="header__subtitle">Product catalog served from a Node.js + Express API</p>
+  </header>
+
+  <main class="container">
+    <!-- Loading state -->
+    <div id="loading" class="state">Loading products...</div>
+
+    <!-- Error state -->
+    <div id="error" class="state state--error" hidden>
+      <p>Could not load products.</p>
+      <button id="retry" class="btn">Retry</button>
+    </div>
+
+    <!-- Data grid -->
+    <section id="grid" class="grid" hidden></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
