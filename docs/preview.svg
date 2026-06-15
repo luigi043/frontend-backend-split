@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" role="img" aria-label="DataBridge product catalog UI preview">
+  <!-- Design tokens mirror frontend/style.css -->
+  <rect width="960" height="560" fill="#0f172a"/>
+
+  <!-- Header -->
+  <text x="480" y="62" text-anchor="middle" fill="#e2e8f0" font-size="34" font-weight="700" letter-spacing="-0.7">DataBridge</text>
+  <text x="480" y="90" text-anchor="middle" fill="#94a3b8" font-size="15">Product catalog served from a Node.js + Express API</text>
+
+  <!-- Controls: search + category filter -->
+  <rect x="30" y="118" width="678" height="44" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+  <text x="46" y="145" fill="#94a3b8" font-size="14">Search products by name...</text>
+  <rect x="720" y="118" width="210" height="44" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="736" y="145" fill="#e2e8f0" font-size="14">All categories</text>
+  <path d="M905 137 l7 0 l-3.5 5 z" fill="#94a3b8"/>
+
+  <!-- Card grid (auto-fill, minmax 240px) -->
+  <!-- Reusable card via groups -->
+  <g>
+    <!-- Row 1 -->
+    <g transform="translate(30,196)">
+      <rect width="288" height="160" rx="14" fill="#1e293b" stroke="#334155"/>
+      <rect x="20" y="20" width="92" height="20" rx="10" fill="#273449"/>
+      <text x="30" y="34" fill="#38bdf8" font-size="10" letter-spacing="0.6">COMPUTERS</text>
+      <text x="20" y="68" fill="#e2e8f0" font-size="16" font-weight="600">Aero Laptop 14</text>
+      <text x="20" y="92" fill="#94a3b8" font-size="13">Thin-and-light 14-inch laptop</text>
+      <text x="20" y="110" fill="#94a3b8" font-size="13">for everyday work.</text>
+      <text x="20" y="142" fill="#e2e8f0" font-size="19" font-weight="700">$1,200</text>
+    </g>
+    <g transform="translate(336,196)">
+      <rect width="288" height="160" rx="14" fill="#1e293b" stroke="#38bdf8"/>
+      <rect x="20" y="20" width="68" height="20" rx="10" fill="#273449"/>
+      <text x="30" y="34" fill="#38bdf8" font-size="10" letter-spacing="0.6">PHONES</text>
+      <text x="20" y="68" fill="#e2e8f0" font-size="16" font-weight="600">Nimbus Phone X</text>
+      <text x="20" y="92" fill="#94a3b8" font-size="13">6.1-inch OLED smartphone with</text>
+      <text x="20" y="110" fill="#94a3b8" font-size="13">all-day battery.</text>
+      <text x="20" y="142" fill="#e2e8f0" font-size="19" font-weight="700">$800</text>
+    </g>
+    <g transform="translate(642,196)">
+      <rect width="288" height="160" rx="14" fill="#1e293b" stroke="#334155"/>
+      <rect x="20" y="20" width="56" height="20" rx="10" fill="#273449"/>
+      <text x="30" y="34" fill="#38bdf8" font-size="10" letter-spacing="0.6">AUDIO</text>
+      <text x="20" y="68" fill="#e2e8f0" font-size="16" font-weight="600">Pulse Buds Pro</text>
+      <text x="20" y="92" fill="#94a3b8" font-size="13">Wireless earbuds with active</text>
+      <text x="20" y="110" fill="#94a3b8" font-size="13">noise cancelling.</text>
+      <text x="20" y="142" fill="#e2e8f0" font-size="19" font-weight="700">$150</text>
+    </g>
+    <!-- Row 2 -->
+    <g transform="translate(30,374)">
+      <rect width="288" height="160" rx="14" fill="#1e293b" stroke="#334155"/>
+      <rect x="20" y="20" width="92" height="20" rx="10" fill="#273449"/>
+      <text x="30" y="34" fill="#38bdf8" font-size="10" letter-spacing="0.6">COMPUTERS</text>
+      <text x="20" y="68" fill="#e2e8f0" font-size="16" font-weight="600">Vega 27 Monitor</text>
+      <text x="20" y="92" fill="#94a3b8" font-size="13">27-inch QHD monitor with a</text>
+      <text x="20" y="110" fill="#94a3b8" font-size="13">144Hz refresh rate.</text>
+      <text x="20" y="142" fill="#e2e8f0" font-size="19" font-weight="700">$340</text>
+    </g>
+    <g transform="translate(336,374)">
+      <rect width="288" height="160" rx="14" fill="#1e293b" stroke="#334155"/>
+      <rect x="20" y="20" width="94" height="20" rx="10" fill="#273449"/>
+      <text x="30" y="34" fill="#38bdf8" font-size="10" letter-spacing="0.6">WEARABLES</text>
+      <text x="20" y="68" fill="#e2e8f0" font-size="16" font-weight="600">Orbit Smartwatch 2</text>
+      <text x="20" y="92" fill="#94a3b8" font-size="13">Fitness watch with heart-rate</text>
+      <text x="20" y="110" fill="#94a3b8" font-size="13">and GPS tracking.</text>
+      <text x="20" y="142" fill="#e2e8f0" font-size="19" font-weight="700">$220</text>
+    </g>
+    <g transform="translate(642,374)">
+      <rect width="288" height="160" rx="14" fill="#1e293b" stroke="#334155"/>
+      <rect x="20" y="20" width="56" height="20" rx="10" fill="#273449"/>
+      <text x="30" y="34" fill="#38bdf8" font-size="10" letter-spacing="0.6">AUDIO</text>
+      <text x="20" y="68" fill="#e2e8f0" font-size="16" font-weight="600">Echo Soundbar 200</text>
+      <text x="20" y="92" fill="#94a3b8" font-size="13">Compact 2.1 soundbar with</text>
+      <text x="20" y="110" fill="#94a3b8" font-size="13">wireless subwoofer.</text>
+      <text x="20" y="142" fill="#e2e8f0" font-size="19" font-weight="700">$180</text>
+    </g>
+  </g>
+</svg>
