@@ -4,6 +4,17 @@ A small web app that demonstrates **client–server architecture**: a Vanilla JS
 front-end fetches product data from a Node.js/Express REST API that reads from a
 local JSON file.
 
+## Example screen
+
+The front-end renders the API response as a responsive, dark-themed card grid
+with live search and a category filter:
+
+![DataBridge product catalog UI](docs/preview.svg)
+
+> The preview above mirrors the live UI (`frontend/`) and its design tokens. Run
+> the app (see [Run it](#run-it)) to interact with search, filtering, and the
+> loading/error states.
+
 ## Architecture
 
 ```
@@ -88,3 +99,7 @@ Planning -> Requirements (fetch + display + handle errors) -> Design (this READM
 -> Implementation (backend first, then frontend) -> Testing (API returns JSON, UI
 renders, errors handled) -> Deployment (frontend: Netlify/Vercel, backend:
 Render/Railway).
+
+## License
+
+Released under the [MIT License](LICENSE).

@@ -14,3 +14,6 @@ npm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# Corrupt git backup (do not publish)
+.git_corrupt_old/
