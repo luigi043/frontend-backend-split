@@ -138,3 +138,12 @@ the backend port. Cross-origin access is open for this local, read-only demo.
 
 Automated frontend tests do not measure browser layout. The resize and Network
 steps above are manual browser checks for the classroom presenter.
+
+## Test evidence
+
+[Word test report](docs/Test%20Evidence.docx) contains captioned screenshots of
+all three automated test results and the syntax/whitespace checks. Original PNG
+screenshots, captured text logs, and HTML transcript views are preserved in
+`docs/test-evidence/`. These are screenshots of actual recorded command output.
+The report also identifies browser layout and accessibility checks that remain
+manual. Its two pages were rendered with Microsoft Word and visually reviewed.

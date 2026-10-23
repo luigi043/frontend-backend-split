@@ -17,3 +17,6 @@ Thumbs.db
 
 # Corrupt git backup (do not publish)
 .git_corrupt_old/
+
+# Internal Word render previews
+docs/test-evidence/render/

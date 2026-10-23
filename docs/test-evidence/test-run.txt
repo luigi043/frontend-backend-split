@@ -1,0 +1,15 @@
+[DataBridge] Unhandled error: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[DataBridge] Unhandled error: Invalid catalog data
+[DataBridge] Unhandled error: Invalid catalog data
+✔ HTTP API: catalog, filters, validation, CORS, 404 and storage failures (1600.3985ms)
+✔ frontend renders literal text, filters, empty state and retry without duplicate categories (106.2824ms)
+✔ frontend catches network, HTTP and malformed payload failures and recovers (10.5995ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4512.9336
+Exit code: 0
