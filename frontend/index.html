@@ -28,22 +28,22 @@
     </div>
 
     <!-- Loading state (animated spinner) -->
-    <div id="loading" class="state">
+    <div id="loading" class="state" role="status">
       <span class="spinner" aria-hidden="true"></span>
       <span>Loading products...</span>
     </div>
 
     <!-- Error state -->
-    <div id="error" class="state state--error" hidden>
+    <div id="error" class="state state--error" role="alert" hidden>
       <p>Could not load products.</p>
       <button id="retry" class="btn">Retry</button>
     </div>
 
     <!-- Empty state (filters matched nothing) -->
-    <div id="empty" class="state" hidden>No products match your filters.</div>
+    <div id="empty" class="state" role="status" hidden>No products match your filters.</div>
 
     <!-- Data grid -->
-    <section id="grid" class="grid" hidden></section>
+    <section id="grid" class="grid" aria-label="Products" hidden></section>
   </main>
 
   <script src="script.js"></script>

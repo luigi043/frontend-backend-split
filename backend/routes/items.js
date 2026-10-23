@@ -13,10 +13,17 @@ const DATA_FILE = path.join(__dirname, "..", "data", "items.json");
 // GET /api/items  ->  [{ id, name, price, category }, ...]
 router.get("/", async (req, res, next) => {
   try {
+    const { category, search } = req.query;
+    if ([category, search].some(value => value !== undefined && typeof value !== "string")) {
+      return res.status(400).json({ error: "category and search must each be a single string" });
+    }
     const raw = await fs.readFile(DATA_FILE, "utf-8");
     let items = JSON.parse(raw);
-
-    const { category, search } = req.query;
+    if (!Array.isArray(items) || items.some(item =>
+      !item || !Number.isInteger(item.id) || typeof item.name !== "string" ||
+      typeof item.category !== "string" || !Number.isFinite(item.price) || item.price < 0 ||
+      (item.description !== undefined && typeof item.description !== "string")
+    )) throw new Error("Invalid catalog data");
 
     // Optional filter by category (exact, case-insensitive).
     if (category && category.toLowerCase() !== "all") {
@@ -27,7 +34,7 @@ router.get("/", async (req, res, next) => {
 
     // Optional filter by name substring (case-insensitive).
     if (search) {
-      const query = search.toLowerCase();
+      const query = search.trim().toLowerCase();
       items = items.filter((item) => item.name.toLowerCase().includes(query));
     }
 

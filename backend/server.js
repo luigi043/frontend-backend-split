@@ -34,6 +34,8 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Internal server error" });
 });
 
-app.listen(PORT, () => {
+if (require.main === module) app.listen(PORT, () => {
   console.log(`DataBridge API running on http://localhost:${PORT}`);
 });
+
+module.exports = app;

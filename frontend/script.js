@@ -30,17 +30,24 @@ function showState({ loading = false, error = false, grid = false, empty = false
 function createCard(item) {
   const card = document.createElement("article");
   card.className = "card";
-  card.innerHTML = `
-    <span class="card__category">${item.category}</span>
-    <h2 class="card__name">${item.name}</h2>
-    <p class="card__desc">${item.description ?? ""}</p>
-    <span class="card__price">$${item.price.toLocaleString()}</span>
-  `;
+  for (const [tag, className, value] of [
+    ["span", "card__category", item.category],
+    ["h2", "card__name", item.name],
+    ["p", "card__desc", item.description ?? ""],
+    ["span", "card__price", new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(item.price)],
+  ]) {
+    const element = document.createElement(tag);
+    element.className = className;
+    element.textContent = value;
+    card.appendChild(element);
+  }
   return card;
 }
 
 // Populate the category dropdown from the unique categories in the data.
 function populateCategories(items) {
+  const selected = categoryEl.value;
+  categoryEl.replaceChildren(new Option("All categories", "all"));
   const categories = [...new Set(items.map((item) => item.category))].sort();
   categories.forEach((cat) => {
     const option = document.createElement("option");
@@ -48,6 +55,7 @@ function populateCategories(items) {
     option.textContent = cat;
     categoryEl.appendChild(option);
   });
+  if (categories.includes(selected)) categoryEl.value = selected;
 }
 
 // Apply the current search + category filters and render the result.
@@ -76,9 +84,15 @@ async function loadItems() {
   showState({ loading: true });
   controlsEl.hidden = true;
   try {
-    const res = await fetch(API_URL);
+    const res = await fetch(API_URL, { signal: AbortSignal.timeout(10000) });
     if (!res.ok) throw new Error(`Request failed: ${res.status}`);
-    allItems = await res.json();
+    const items = await res.json();
+    if (!Array.isArray(items) || items.some(item => !item ||
+      typeof item.name !== "string" || typeof item.category !== "string" ||
+      !Number.isFinite(item.price) || item.price < 0 ||
+      (item.description !== undefined && typeof item.description !== "string")
+    )) throw new Error("Invalid catalog response");
+    allItems = items;
 
     populateCategories(allItems);
     controlsEl.hidden = false;
